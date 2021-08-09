@@ -1,0 +1,17 @@
+<h1><%= @label_name %></h1>
+<% @results.each do |release| %>
+  <div>
+    <h2><%= release.name %></h2>
+    <div><%= release.release_date %><div>
+    <table>
+    <% release.tracks.each do |track| %>
+      <tr>
+        <td><%= track.track_number %></td>
+        <td>
+          <div><b><%= track.name %></b></div><div><%= artist_names(track) %></div>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+<% end %>
