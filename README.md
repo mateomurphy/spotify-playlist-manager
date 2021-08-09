@@ -1,24 +1,11 @@
-# README
+# Spotify Playlist Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple experiment with the spotify api, to search for a label and generate a playlist from its releases.
 
-Things you may want to cover:
+## How to use:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Visit https://spotify-playlist-manager-test.herokuapp.com/ and click login to connect your spotify account
+* Visit the label page for your label e.g.
+  * https://spotify-playlist-manager-test.herokuapp.com/labels/Basic%20Channel
+  * https://spotify-playlist-manager-test.herokuapp.com/labels/Proton%20Music
+* Click the "Create playlist" button to create a playlist containing all the tracks from the results
