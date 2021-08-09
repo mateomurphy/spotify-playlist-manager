@@ -18,16 +18,5 @@
         <div class="text-sm"><%= release.release_date %></div>
       </div>
     </div>
-    <table>
-    <% release.tracks.each do |track| %>
-      <tr>
-        <td class="w-6 text-right pr-3"><%= track.track_number %></td>
-        <td class="pb-2">
-          <div class="leading-tight"><%= track.name %></div>
-          <div class="text-sm text-gray-500"><%= artist_names(track) %></div>
-        </td>
-      </tr>
-    <% end %>
-    </table>
   </div>
 <% end %>
