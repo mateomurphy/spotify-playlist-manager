@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/auth/spotify/callback', to: 'omniauth#spotify'
 
   resources :labels
-
+  resources :playlists
 end

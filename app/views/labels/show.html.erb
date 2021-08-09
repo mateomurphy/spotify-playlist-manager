@@ -1,5 +1,12 @@
-<div class="text-sm uppercase">Label</div>
-<h1 class="mb-12 text-6xl font-bold"><%= @label_name %></h1>
+<div class="flex justify-between items-center mb-12">
+  <div>
+    <div class="text-sm uppercase">Label</div>
+    <h1 class="text-6xl font-bold"><%= @label_name %></h1>
+  </div>
+  <div>
+    <%= button_to "Create playlist", playlists_path, class: "rounded-full px-4 py-1 bg-gray-200 hover:bg-gray-300", params: { id: @label_name } %>
+  </div>
+</div>
 <% @results.each do |release| %>
   <div class="mb-12">
     <div class="flex mb-4">
