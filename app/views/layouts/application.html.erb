@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SpotifyManager</title>
+    <title>Spotify Manager</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -10,7 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-  <body class="p-4 text-gray-900">
+  <body>
+    <div class="flex justify-between text-gray-100 bg-gray-700 py-2 px-4">
+      <div>Spotify Manager</div>
+      <div><%= current_user.id if current_user %></div>
+    </div>
+    <div class="p-4 text-gray-900">
     <%= yield %>
+    </div>
   </body>
 </html>
