@@ -1,14 +1,23 @@
-<h1><%= @label_name %></h1>
+<div class="text-sm uppercase">Label</div>
+<h1 class="mb-12 text-6xl font-bold"><%= @label_name %></h1>
 <% @results.each do |release| %>
-  <div>
-    <h2><%= release.name %></h2>
-    <div><%= release.release_date %><div>
+  <div class="mb-12">
+    <div class="flex mb-4">
+      <div class="mr-4">
+        <%= image_tag release.images[2]['url'], size: '64' %>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mb-1"><%= release.name %></h2>
+        <div class="text-sm"><%= release.release_date %></div>
+      </div>
+    </div>
     <table>
     <% release.tracks.each do |track| %>
       <tr>
-        <td><%= track.track_number %></td>
-        <td>
-          <div><b><%= track.name %></b></div><div><%= artist_names(track) %></div>
+        <td class="w-6 text-right pr-3"><%= track.track_number %></td>
+        <td class="pb-2">
+          <div class="leading-tight"><%= track.name %></div>
+          <div class="text-sm text-gray-500"><%= artist_names(track) %></div>
         </td>
       </tr>
     <% end %>
