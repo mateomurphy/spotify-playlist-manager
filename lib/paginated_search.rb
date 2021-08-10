@@ -1,17 +1,17 @@
-class PaginatedSearch 
+class PaginatedSearch
   include Enumerable
 
-  def initialize(term)
-    @term = term
+  def initialize(&block)
+    @block = block
   end
 
   def each
     return to_enum(:each) unless block_given?
 
     offset = 0
-    
+
     loop do
-      results = RSpotify::Album.search(@term, offset: offset)
+      results = @block.call(offset)
 
       break if results.length == 0
 

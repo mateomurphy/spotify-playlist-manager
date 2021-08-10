@@ -7,7 +7,7 @@ class PlaylistsController < ApplicationController
 
   def create
     @label_name = params[:id]
-    @results = PaginatedSearch.new("label:\"#{@label_name}\"").sort { |a, b| b.release_date <=> a.release_date }
+    @results = Release.find_by_label(@label_name)
 
     playlist = current_user.create_playlist!(@label_name)
 
